@@ -1,0 +1,82 @@
+<h2>Add New Training</h2>
+
+<form #trainingForm="ngForm" (ngSubmit)="addTraining()">
+
+  <div>
+    <label>Training Title</label>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="training.title"
+      required
+    />
+  </div>
+
+  <div>
+    <label>Topic</label>
+    <input
+      type="text"
+      name="topic"
+      [(ngModel)]="training.topic"
+      required
+    />
+  </div>
+
+  <div>
+    <label>Max Trainees</label>
+    <input
+      type="number"
+      name="maxTrainees"
+      [(ngModel)]="training.maxTrainees"
+      required
+      min="1"
+    />
+  </div>
+
+  <div>
+    <label>Start Date</label>
+    <input
+      type="date"
+      name="startDate"
+      [(ngModel)]="training.startDate"
+      required
+    />
+  </div>
+
+  <div>
+    <label>End Date</label>
+    <input
+      type="date"
+      name="endDate"
+      [(ngModel)]="training.endDate"
+      required
+    />
+  </div>
+
+  <div>
+    <label>Trainer Name</label>
+    <input
+      type="text"
+      name="trainerName"
+      [(ngModel)]="training.trainerName"
+      required
+    />
+  </div>
+
+  <div>
+    <label>Venue</label>
+    <input
+      type="text"
+      name="venue"
+      [(ngModel)]="training.venue"
+      required
+    />
+  </div>
+
+  <br />
+
+  <button type="submit" [disabled]="trainingForm.invalid">
+    Add Training
+  </button>
+
+</form>
